@@ -51,7 +51,7 @@ class AppContainer(
     val networkMonitor = NetworkMonitor(appContext, errorLog)
     val secretStore: ApiKeyStore = LegacyApiKeyStore(appContext, errorLog)
     val settingsRepository: SettingsSource = SettingsRepository(appContext)
-    val exportManager = ExportManager(appContext)
+    val exportManager = ExportManager(appContext, errorLog)
 
     @Volatile
     var storageMode: String = "Initializing"
