@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ஜார்விஸ் (JARVIS)</string>
+    <string name="phase0_badge">நிலை 0 • அடிப்படை கட்டமைப்பு (PHASE 0)</string>
+    <string name="mic_state_off">மைக்: ஆஃப் (நிலை 0-ல் ஒலி சேவை இணைக்கப்படவில்லை)</string>
+    <string name="not_implemented_phase0">நிலை 0-ல் இன்னும் செயல்படுத்தப்படவில்லை (NOT IMPLEMENTED)</string>
+    <string name="nav_home">முகப்பு</string>
+    <string name="nav_history">வரலாறு</string>
+    <string name="nav_memory">நினைவகம்</string>
+    <string name="nav_automation">தானியங்கி</string>
+    <string name="nav_settings">அமைப்புகள்</string>
+    <string name="nav_permissions">அனுமதிகள்</string>
+</resources>

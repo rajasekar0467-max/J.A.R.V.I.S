@@ -1,0 +1,5 @@
+# Copy this file to local.properties and set your local Android SDK path.
+# NEVER put API keys or signing passwords in versioned files.
+# All JARVIS API keys are entered in-app in Settings -> SecretStore Vault
+# and encrypted at rest using AndroidKeyStore AES-256-GCM.
+sdk.dir=/path/to/Android/Sdk

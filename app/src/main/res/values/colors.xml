@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="jarvis_bg_obsidian">#FF070B12</color>
+    <color name="jarvis_surface_card">#FF0E1624</color>
+    <color name="jarvis_cyan_primary">#FF00E5FF</color>
+    <color name="jarvis_blue_secondary">#FF38BDF8</color>
+    <color name="jarvis_amber_warning">#FFF59E0B</color>
+    <color name="jarvis_green_verified">#FF10B981</color>
+    <color name="jarvis_red_danger">#FFEF4444</color>
+</resources>

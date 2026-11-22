@@ -1,0 +1,7 @@
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-keep class com.jarvis.assistant.conversation.ConversationEntity { *; }
+-keep class com.jarvis.assistant.conversation.MessageEntity { *; }
+-keep class com.jarvis.assistant.conversation.MemoryFactEntity { *; }
+-keep class com.jarvis.assistant.conversation.ReminderEntity { *; }
+-dontwarn okhttp3.**
+-dontwarn okio.**
