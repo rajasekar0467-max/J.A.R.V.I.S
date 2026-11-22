@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.jarvis.assistant.ui.components.JarvisOrb
+import com.jarvis.assistant.voice.VoiceState
 import com.jarvis.assistant.ui.theme.JarvisAmberWarning
 import com.jarvis.assistant.ui.theme.JarvisCyanPrimary
 import com.jarvis.assistant.ui.theme.JarvisSurfaceCard
@@ -48,7 +49,7 @@ fun HomeScreen() {
         }
 
         Spacer(modifier = Modifier.height(24.dp))
-        JarvisOrb()
+        JarvisOrb(state = VoiceState.IDLE)
         Spacer(modifier = Modifier.height(24.dp))
 
         Card(

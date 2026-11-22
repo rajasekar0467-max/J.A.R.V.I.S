@@ -10,8 +10,7 @@ object Redactor {
     )
 
     fun redact(text: String?): String {
-        if (text.isNullOrEmpty()) return ""
-        var out = text
+        var out: String = text ?: return ""
         for (regex in patterns) {
             out = regex.replace(out, "[REDACTED]")
         }
