@@ -15,3 +15,8 @@ val TextSecondary = Color(0xFF9BB8A8)
 val TextMuted = Color(0xFF638070)
 val ErrorRed = Color(0xFFEF4444)
 val WarningAmber = Color(0xFFF59E0B)
+// Compatibility colors used by the newer JARVIS UI screens.
+val JarvisSurfaceCard = CardEmerald
+val JarvisCyanPrimary = EmeraldGlow
+val JarvisGreenVerified = SoftNeonEmerald
+val JarvisAmberWarning = WarningAmber

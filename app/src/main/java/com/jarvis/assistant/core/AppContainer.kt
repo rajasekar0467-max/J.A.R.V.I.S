@@ -22,7 +22,7 @@ import com.jarvis.assistant.diagnostics.DiagnosticsCollector
 import com.jarvis.assistant.memory.MemoryRepository
 import com.jarvis.assistant.memory.RoomMemoryRepository
 import com.jarvis.assistant.security.ApiKeyStore
-import com.jarvis.assistant.security.SecretStore
+import com.jarvis.assistant.security.LegacyApiKeyStore
 import com.jarvis.assistant.settings.SettingsRepository
 import com.jarvis.assistant.settings.SettingsSource
 import com.jarvis.assistant.voice.SpeechInput
@@ -49,7 +49,7 @@ class AppContainer(
     val errorLog = ErrorLog()
     val startupTracker = StartupTracker(SharedPrefsKeyValueStore(appContext), errorLog)
     val networkMonitor = NetworkMonitor(appContext, errorLog)
-    val secretStore: ApiKeyStore = SecretStore(appContext, errorLog)
+    val secretStore: ApiKeyStore = LegacyApiKeyStore(appContext, errorLog)
     val settingsRepository: SettingsSource = SettingsRepository(appContext)
     val exportManager = ExportManager(appContext)
 

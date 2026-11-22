@@ -34,12 +34,13 @@ class NetworkMonitor(
     }
 
     fun start() {
-        if (registered || cm == null) return
+        val manager = cm ?: return
+        if (registered) return
         runCatching {
             val req = NetworkRequest.Builder()
                 .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
                 .build()
-            cm.registerNetworkCallback(req, callback)
+            manager.registerNetworkCallback(req, callback)
             registered = true
             _state.value = currentSnapshot()
         }.onFailure {
@@ -48,8 +49,9 @@ class NetworkMonitor(
     }
 
     fun stop() {
-        if (!registered || cm == null) return
-        runCatching { cm.unregisterNetworkCallback(callback) }
+        val manager = cm ?: return
+        if (!registered) return
+        runCatching { manager.unregisterNetworkCallback(callback) }
         registered = false
     }
 

@@ -3,7 +3,7 @@ package com.jarvis.assistant
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.jarvis.assistant.core.ErrorLog
-import com.jarvis.assistant.security.SecretStore
+import com.jarvis.assistant.security.LegacyApiKeyStore
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -15,7 +15,7 @@ class SecretStoreInstrumentedTest {
 
     @Test
     fun roundTripsEncryptedKeyAndClearsSeparately() {
-        val store = SecretStore(ApplicationProvider.getApplicationContext(), ErrorLog())
+        val store = LegacyApiKeyStore(ApplicationProvider.getApplicationContext(), ErrorLog())
         store.clearKey()
         assertFalse(store.hasKey())
 

@@ -65,10 +65,12 @@ class RoomConversationRepository(
     override suspend fun exportAll(): String {
         val convs = conversationDao.getAllConversations().map { it.toModel() }
         if (convs.isEmpty()) return "No conversations to export."
-        return convs.joinToString("\n========================================\n\n") { conv ->
+        val exports = mutableListOf<String>()
+        for (conv in convs) {
             val msgs = messageDao.getMessages(conv.id).map { it.toModel() }
-            ConversationExporter.format(conv, msgs)
+            exports += ConversationExporter.format(conv, msgs)
         }
+        return exports.joinToString("\n========================================\n\n")
     }
 
     override suspend fun clearAll() {

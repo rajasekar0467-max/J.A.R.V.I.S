@@ -19,7 +19,7 @@ interface ApiKeyStore {
     fun probeStatus(): String
 }
 
-class SecretStore(
+class LegacyApiKeyStore(
     context: Context,
     private val errorLog: ErrorLog
 ) : ApiKeyStore {
